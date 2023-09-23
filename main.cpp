@@ -22,13 +22,25 @@ void setup() {
 }
 
 void loop() {
+
+    verificacion(); // Llamamos a la función de verificación
+
+}
+
+void verificacion() {
+
     // Encender todos los LEDs
-
     shiftOut(SER1, SRCLK1, MSBFIRST, 255); //Se cargan los datos en el registro de desplazamiento
-
     digitalWrite(RCLK1, HIGH); // Latch para actualizar la matriz (cargar datos al registro de almacenamiento)
     digitalWrite(RCLK1, LOW); // actualiza y muestra correctamente los datos en la matriz
 
+    delay(2000); // Espera 2 segundos (todos los LEDs encendidos)
 
-    delay(1000); // Espera 1 segundo
+    // Apagar todos los LEDs
+    shiftOut(SER1, SRCLK1, MSBFIRST, 0); // Se apagan los LEDs en el primer registro de desplazamiento
+    digitalWrite(RCLK1, HIGH); // Latch para apagar la matriz (cargar datos al registro de almacenamiento)
+    digitalWrite(RCLK1, LOW); // actualiza y muestra correctamente los datos en la matriz
+
+    delay(2000); // Espera 2 segundos (todos los LEDs apagados)
+
 }
