@@ -14,3 +14,10 @@ void setup() {
     pinMode(SER2, OUTPUT);
     pinMode(SRCLK2, OUTPUT);
     pinMode(RCLK2, OUTPUT);
+
+    // Vamos a escribir por estos pines
+    digitalWrite(RCLK1, LOW);
+    digitalWrite(SRCLK1, LOW);
+    digitalWrite(RCLK2, LOW);
+    digitalWrite(SRCLK2, LOW);
+}
