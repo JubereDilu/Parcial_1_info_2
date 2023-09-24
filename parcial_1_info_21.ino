@@ -48,4 +48,17 @@ void verificacion() {
     delay(2000); // Espera 2 segundos (todos los LEDs apagados)
    
 }
+void imagen() {
+    byte patrones[8]; // Array para almacenar el patrón de cada fila
+    byte fila;
 
+    for (fila = 0; fila < 8; fila++) {
+        Serial.print("Ingrese el patrón para la fila ");
+        Serial.print(fila);
+        Serial.print(": ");
+
+
+    }
+
+
+}
