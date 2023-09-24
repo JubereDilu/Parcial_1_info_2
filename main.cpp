@@ -1,4 +1,4 @@
-// Definición de pines
+/*// Definición de pines
 #define SER1 11
 #define SRCLK1 12
 #define RCLK1 8
@@ -53,7 +53,38 @@ void imagen() {
         Serial.print(fila);
         Serial.print(": ");
 
+
     }
 
 
+}*/
+#include <iostream>
+
+using namespace std;
+
+int main() {
+    char matriz[8][8] ;
+
+    // Llenar la matriz con espacios en blanco
+    for (int i = 0; i < 8; i++) {
+        for (int j = 0; j < 8; j++) {
+            matriz[i][j] = ' ';
+        }
+    }
+
+    // Colocar la "X" en la matriz
+    for (int i = 0; i < 8; i++) {
+        matriz[i][i] = 'X';
+        matriz[i][7 - i] = 'X';
+    }
+
+    // Imprimir la matriz
+    for (int i = 0; i < 8; i++) {
+        for (int j = 0; j < 8; j++) {
+            cout << matriz[i][j];
+        }
+        cout << endl;
+    }
+
+    return 0;
 }
