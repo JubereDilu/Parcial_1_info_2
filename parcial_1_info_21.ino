@@ -36,7 +36,8 @@ void loop() {
  //verificacion(); // Llamamos a la función de verificación
   //patron1();
   //patron2();
-  patron3();
+  //patron3();
+  patron4();
   
 }
 
@@ -128,6 +129,30 @@ void patron3() {
     digitalWrite(RCLK1, HIGH); 
    
 }
+void patron4() {  
+    
+	digitalWrite(RCLK1, LOW); 
+    shiftOut(SER1, SRCLK1, LSBFIRST, B11110000);  
+  	shiftOut(SER1, SRCLK1, MSBFIRST, B01111110);  
+    digitalWrite(RCLK1, HIGH); 
+  
+ 	digitalWrite(RCLK1, LOW);
+   	shiftOut(SER1, SRCLK1, LSBFIRST, B01111000); 
+  	shiftOut(SER1, SRCLK1, MSBFIRST, B10111101);
+    digitalWrite(RCLK1, HIGH); 
+     
+    digitalWrite(RCLK1, LOW); 
+    shiftOut(SER1, SRCLK1, LSBFIRST, B00111100); 
+  	shiftOut(SER1, SRCLK1, MSBFIRST, B11011011);  
+    digitalWrite(RCLK1, HIGH); 
+    
+    digitalWrite(RCLK1, LOW); 
+    shiftOut(SER1, SRCLK1, LSBFIRST, B00011110);  
+  	shiftOut(SER1, SRCLK1, MSBFIRST, B11100111);  
+    digitalWrite(RCLK1, HIGH); 
+   
+}
+
 
 
 
