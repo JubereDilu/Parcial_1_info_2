@@ -34,9 +34,10 @@ void setup() {
 void loop() {
   
  //verificacion(); // Llamamos a la función de verificación
-  patron1();
+  //patron1();
   //patron2();
-
+  patron3();
+  
 }
 
 void verificacion() {  
@@ -104,6 +105,30 @@ void patron1() {
     digitalWrite(RCLK1, HIGH); 
    
 }
+void patron3() {  
+    
+	digitalWrite(RCLK1, LOW); 
+    shiftOut(SER1, SRCLK1, LSBFIRST, B11011011);  
+  	shiftOut(SER1, SRCLK1, MSBFIRST, B00111111);  
+    digitalWrite(RCLK1, HIGH); 
+  
+ 	digitalWrite(RCLK1, LOW);
+   	shiftOut(SER1, SRCLK1, LSBFIRST, B01101101); 
+  	shiftOut(SER1, SRCLK1, MSBFIRST, B11001111);
+    digitalWrite(RCLK1, HIGH); 
+     
+    digitalWrite(RCLK1, LOW); 
+    shiftOut(SER1, SRCLK1, LSBFIRST, B11011011); 
+  	shiftOut(SER1, SRCLK1, MSBFIRST, B11110011);  
+    digitalWrite(RCLK1, HIGH); 
+    
+    digitalWrite(RCLK1, LOW); 
+    shiftOut(SER1, SRCLK1, LSBFIRST, B01101101);  
+  	shiftOut(SER1, SRCLK1, MSBFIRST, B11111100);  
+    digitalWrite(RCLK1, HIGH); 
+   
+}
+
 
 
 
